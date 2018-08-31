@@ -24,12 +24,28 @@
     }
 
     &__left {
-        width: 33.333333%;
-        display: table-cell;
+        // width: 33.333333%;
+        // display: table-cell;
+
+        // @include responsive(tab-port) {
+        //     width: 0;
+        //     display: none;
+        // }
+
+        display: none;
     }
 
     &__right {
-        width: 66.666667%;
+        // width: 66.666667%;
+        // display: table-cell;
+        // vertical-align: middle;
+        // padding: 3rem 5rem;
+
+        // @include responsive(tab-port) {
+        //     width: 100%;
+        // }
+
+        width: 100%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;

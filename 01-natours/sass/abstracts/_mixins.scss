@@ -12,3 +12,55 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANAGER
+/*
+    0 - 600PX:      PHONE
+    600 - 900px:    TABLET PORTRAIT
+    900 - 1200px:   TABLET LANDSCAPE
+    [1200 - 1800px] is where our normal styles apply 
+    1800px + :      BIG DESKTOP
+*/
+
+// @mixin respond-phone {
+//     @media (max-width: 600px) { @content };
+// }
+
+// @mixin respond-tablet-portrait {
+//     @media (max-width: 900px) { @content };
+// }
+
+// @mixin respond-tablet-landscape {
+//     @media (max-width: 1200px) { @content };
+// }
+
+// @mixin respond-big-desktop {
+//     @media (max-width: 1800px) { @content };
+// }
+
+/*
+    $breakpoint argument choices:
+        - phone
+        - tab-port
+        - tab-land
+        - big-desktop
+
+    ORDER: base + typography > general layout + grid > page layout > components
+*/
+
+// We use 'em' to adapt to the fontsize that the user sets on the browser.
+//      default: 1em = 16px
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content };    // 600px;
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content };   // 900px;
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content };      // 1200px;
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content };   // 1800px;
+    }
+}
