@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid');
+
+/* ---------------------------------------------------
+    CSS VARIABLES
+--------------------------------------------------- */
+:root {
+    --accent: #F6AE2D;
+    --dark: #2F4858;
+    --light: #EBF5EE;
+    
+    --border: 5px solid var(--accent);
+  }
+
+/* ---------------------------------------------------
+    BASE STYLES 
+--------------------------------------------------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    /* This defines what 1rem is | 62.5% = 10px (browser default: 16px) */
+    font-size: 62.5%; /* 1 rem = 10px; */
+    font-family: 'Londrina Solid', sans-serif;
+    /* letter-spacing: .1rem; */
+}
+body {
+    background-color: var(--dark);
+    user-select: none;
+}
+small {
+    font-size: 2rem;
+}
+.container {
+    max-width: 55rem;
+    margin: 0 auto;
+}
+
+.title {
+    color: var(--light);
+    font-size: 4.2rem;
+    padding-bottom: 1rem;
+}
+
+section {
+    padding: 10rem 4rem;
+}
+section > .parent {
+    width: 45rem;
+    height: 50rem;
+    border: .5rem solid var(--accent);
+    box-sizing: border-box;
+}
+
+.element {
+    color: var(--light);
+    font-size: 2.2rem;
+}
+
+/* ---------------------------------------------------
+    TABLE SECTION
+--------------------------------------------------- */
+.section-table > .parent {
+    display: table;
+}
+
+.section-table > .parent > .element {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* ---------------------------------------------------
+    ABSOLUTE SECTION
+--------------------------------------------------- */
+.section-absolute > .parent {
+    position: relative;
+}
+.section-absolute > .parent > .element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ---------------------------------------------------
+    FLEXBOX SECTION
+--------------------------------------------------- */
+.section-flexbox .parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ---------------------------------------------------
+    GRIDS SECTION
+--------------------------------------------------- */
+.section-grids .parent {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------------------------------------------
+    MARGIN SECTION
+--------------------------------------------------- */
+.section-margin .parent {
+    display: flex;
+    /* display: grid; */
+}
+.section-margin .parent .element {
+    margin: auto;
+}
