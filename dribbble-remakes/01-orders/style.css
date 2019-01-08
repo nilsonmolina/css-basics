@@ -1,0 +1,188 @@
+/* ---------------------------------------------------
+    CSS VARIABLES
+--------------------------------------------------- */
+:root {
+    --primary-color: #4696E7;
+    --primary-color-dark: #428EDB;
+    --primary-color-darker: #3782CF;
+
+    /* --secondary-light: #1F2E45;
+    --secondary-dark: #1C293F;
+
+    --tertiary-light: #1F2E45;
+    --tertiary-dark: #1C293F; */
+    
+    --default-font-size: 1.5rem;
+    --large-font-size: 1.7rem;
+    --xlarge-font-size: 1.9rem;
+    --small-font-size: 1.3rem;
+    --xsmall-font-size: 1.1rem;
+
+    --grey-font-color: #555;
+    --light-grey-font-color: #777;
+    --dark-grey-font-color: #444;
+}
+
+/* ---------------------------------------------------
+    BASE STYLES
+--------------------------------------------------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    user-select: none;
+}
+
+html {
+    /* This defines what 1rem is | 62.5% = 10px (browser default: 16px) */
+    font-size: 62.5%; /* 1 rem = 10px; */
+    font-family: 'Mukta', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: #fff;
+    font-size: var(--default-font-size);
+}
+
+/* ---------------------------------------------------
+    PAGE STYLES
+--------------------------------------------------- */
+.page-wrap {
+    height: 100%;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+}
+.container {
+    height: 100%;
+    width: 100rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+@media only screen and (min-width: 1800px) {
+    .page-wrap {
+        min-height: 95vh;
+        width: 95vw;
+        max-width: 125rem;
+        margin: 2rem auto;
+        box-shadow: 0 1rem 6rem rgba(0,0,0,.4);
+    }
+}
+@media only screen and (max-width: 1080px) {
+    .page-wrap { width: 108rem; }
+    .container { margin: 0 4rem; }
+}
+@media only screen and (max-width: 800px) {
+    .container { margin: 0 2rem; }
+}
+.page-content .container {
+    padding-top: 2rem;
+}
+.page-content h1 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: var(--grey-font-color);
+}
+
+/* ---------------------------------------------------
+    NAVBAR
+--------------------------------------------------- */
+.navbar {
+    height: 8rem;
+    background-color: var(--primary-color);
+}
+.navbar-items {
+    height: 100%;
+    display: flex;
+}
+.navbar-links, .navbar-icons {
+    height: 100%;
+    display: flex;
+}
+.navbar-icons {
+    margin-left: auto;
+}
+.navbar-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: var(--default-font-size);
+    font-weight: 200;
+    text-align: center;
+    color: #eee;
+    padding: 0 1.5rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.navbar-item:first-child {
+    padding-left: 0;
+}
+.navbar-item:hover {
+    color: #fff;
+}
+.navbar-item.active {
+    font-weight: 500;
+    color: #fff;
+}
+.navbar-icons .navbar-item {
+    font-size: 2rem;
+    padding: 0 3rem !important;
+}
+.navbar-icons .navbar-item:hover,
+.navbar-icons .active {
+    background-color: rgba(0,0,0, 0.1);
+}
+.navbar-icons .navbar-icon {
+    position: relative;
+    color: #fff;
+}
+.navbar-icons .alert .navbar-icon::before {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    top: .2rem;
+    right: -.5rem;
+    box-sizing: content-box;
+    border-radius: 50%;
+    background: #e672d3;
+}
+
+/* ---------------------------------------------------
+    SECONDARY NAV
+--------------------------------------------------- */
+.inner-nav {
+    width: 100%;
+    padding-top: .5rem;
+    padding-bottom: 1.7rem;
+}
+.inner-nav-items {
+    display: flex;
+    align-items: center;
+}
+.inner-nav-item {
+    font-size: var(--default-font-size);
+    line-height: 1.7rem;
+    font-weight: 200;
+    color: var(--light-grey-font-color);
+    margin: 0 1rem;
+    transition: color .2s ease-in;
+    cursor: pointer;
+}
+.inner-nav-item:first-child {
+    margin-left: 0;
+}
+.inner-nav-item:hover {
+    color: var(--dark-grey-font-color);
+}
+.inner-nav-item.active {
+    font-weight: 500;
+    color: var(--grey-font-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.line-break {
+    border-bottom: 1px solid #dadada;
+}
