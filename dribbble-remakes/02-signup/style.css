@@ -1,0 +1,248 @@
+/* ---------------------------------------------------
+    CSS VARIABLES
+--------------------------------------------------- */
+:root {
+    --primary-color: #FF8779;
+    --primary-color-dark: #F36161;
+
+    /* --secondary-light: #1F2E45;
+    --secondary-dark: #1C293F;
+
+    --tertiary-light: #1F2E45;
+    --tertiary-dark: #1C293F; */
+    
+    --default-font-size: 1.5rem;
+    --large-font-size: 1.7rem;
+    --xlarge-font-size: 1.9rem;
+    --small-font-size: 1.3rem;
+    --xsmall-font-size: 1.1rem;
+
+    --grey-font-color: #555;
+    --light-grey-font-color: #777;
+    --dark-grey-font-color: #444;
+}
+
+/* ---------------------------------------------------
+    BASE STYLES
+--------------------------------------------------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    user-select: none;
+}
+
+html {
+    /* This defines what 1rem is | 62.5% = 10px (browser default: 16px) */
+    font-size: 62.5%; /* 1 rem = 10px; */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    color: #fff;
+    font-size: var(--default-font-size);
+    background-image: linear-gradient(to bottom right, var(--primary-color), var(--primary-color-dark));
+    position: relative;
+}
+
+input {
+    border: none;
+}
+input:focus {
+    outline: none;
+    border-bottom: none;
+}
+button,
+button:link,
+button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+    transition: all .2s;
+
+    border: none;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------
+    PAGE STYLES
+--------------------------------------------------- */
+.page-wrap {
+    width: 100rem;
+    margin: 0 auto;
+}
+.page-content {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* ---------------------------------------------------
+    NAVBAR
+--------------------------------------------------- */
+.navbar {
+    padding: 5rem 0 15rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.navbar .title {
+    text-transform: uppercase;
+}
+.navbar .subtitle {
+    position: relative;
+    font-weight: 100;
+    padding-right: 6rem;
+}
+.navbar .subtitle::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    height: 1px;
+    width: 3rem;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.navbar .action {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* ---------------------------------------------------
+    WELCOME TEXT
+--------------------------------------------------- */
+.welcome-text {
+    position: relative;
+    width: 45rem;
+    margin-top: 5rem;
+    color: #fff;
+    font-size: 5rem;
+    line-height: 7rem;
+    font-weight: 200;
+}
+
+/* ---------------------------------------------------
+    LOGIN FORM
+--------------------------------------------------- */
+.login-form {
+    width: 30rem;
+    padding: 5rem 5rem 4rem 5rem;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.login-form form > * {
+    width: 100%;
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.login-form .icon {
+    color: var(--primary-color-dark);
+    align-self: center;
+    padding-right: 1rem;
+    font-size: 1.8rem;
+}
+.login-form input {
+    flex-grow: 1;
+    height: 5rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: #555;
+}
+.login-form input::placeholder {
+    color:#aaaaaa;
+}
+.login-form input:focus::placeholder {
+    color:#d1cad1;
+}
+.login-form .underline::before {
+    content: "";
+    position: absolute;
+    bottom: -.4rem;
+    width: 100%;
+    height: 1px;
+    background-color: #dadada;
+    transition: all .2s ease-in;
+}
+.login-form .underline:focus-within::before {
+    transform: scaleX(1.1);
+    background: var(--primary-color-dark);
+}
+
+.login-form .submit {
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+.login-form .submit button {
+    align-self: right;
+    margin-top: 2rem;
+    padding: 1.7rem 5rem;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    transition: all .2s ease-in;
+    background-image: linear-gradient(
+        to right,
+        var(--primary-color-dark),
+        var(--primary-color)
+    );
+}
+
+.login-form .submit button:hover,
+.login-form .submit button:focus,
+.login-form .submit button:active {
+    transform: scale(0.99);
+    box-shadow: 0 0 1rem rgba(0,0,0,.2);
+    border: none;
+    outline: 0;
+}
+
+/* ---------------------------------------------------
+    Circles
+--------------------------------------------------- */
+.circles {
+    position: fixed;
+}
+.circle-left::before {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    left: -10rem;
+    height: 21rem;
+    width: 21rem;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.05);
+}
+.circle-right::before {
+    content: "";
+    position: absolute;
+    top: 18rem;
+    left: 3rem;
+    height: 60rem;
+    width: 60rem;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.05);
+}
+.login-form::before {
+    content: "";
+    position: absolute;
+    bottom: -19rem;
+    right: -10rem;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    background-color: rgba(200, 150, 200, .08);
+}
