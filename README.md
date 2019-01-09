@@ -1,7 +1,7 @@
 # css-basics
 This repo will hold a combination of css trainings and css tricks that I've learned.
 
-## Websites
+## Live Demos
 ### __Udemy Course: Advanced CSS__
 - [Natours: Touring agency site](https://nilsonmolina.github.io/css-basics/advanced-css/01-natours/index.html)
 
@@ -13,7 +13,7 @@ This repo will hold a combination of css trainings and css tricks that I've lear
     *- [Original Design](https://dribbble.com/shots/3316866-Order-Details)*
 
 - **[Signup](https://nilsonmolina.github.io/css-basics/dribbble-remakes/02-signup/index.html)**  
-    A simple and clean sign up form. Written with HTML & CSS.  No libraries, frameworks, tools or JS was used.  
+    A simple and clean sign up form. Written with HTML, CSS and a tiny bit of Plain JS for the form submission.  No libraries or frameworks were used.
     *- [Original Design](https://dribbble.com/shots/5311799-Pigeon-Create-an-Account)*
 
 ### __Quick CSS Tricks__

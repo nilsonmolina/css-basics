@@ -24,34 +24,83 @@
         <div class="page-content">
             <div class="welcome-text">
                 <div class="circles circle-left"></div>
-                <span>Welcome, You! Feed me with some details.</span>
+                <span class="welcome">Welcome, You! Feed me with some details.</span>
+                <span class="greeting">
+                    Greetings,
+                    <br/><span class="name"></span>!
+                </span>
             </div>
 
-            <div class="login-form">
-                <div class="circles circle-right"></div>
-                <form>
-                    <div class="email underline">
-                        <span class="icon icon-mail"></span>
-                        <input type="text" placeholder="Email">
-                    </div>
-                    <div class="password underline">
-                        <span class="icon icon-lock"></span>
-                        <input type="password" placeholder="Password">
-                    </div>
-                    <div class="first-name underline">
-                        <span class="icon icon-toggle-left"></span>
-                        <input type="text" placeholder="First Name">
-                    </div>
-                    <div class="last-name underline">
-                        <span class="icon icon-toggle-right"></span>
-                        <input type="text" placeholder="Last Name">
-                    </div>
-                    <div class="submit">
-                        <button type="submit">submit</button>
-                    </div>
-                </form>
+            <div class="signup">
+                <div class="signup-form">
+                    <div class="circles circle-right"></div>
+                    <form autocomplete="off">
+                        <div class="email underline">
+                            <span class="icon icon-mail"></span>
+                            <input id="email" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="password underline">
+                            <span class="icon icon-lock"></span>
+                            <input id="password" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="first-name underline">
+                            <span class="icon icon-toggle-left"></span>
+                            <input id="first-name" type="text" placeholder="First Name" required>
+                        </div>
+                        <div class="last-name underline">
+                            <span class="icon icon-toggle-right"></span>
+                            <input id="last-name" type="text" placeholder="Last Name" required>
+                        </div>
+                        <div class="submit">
+                            <button type="submit" tabindex="0">submit</button>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="signup-confirm">
+                    <p class="title">Check your inbox.</p>
+                    <p class="message">We have sent a confirmation link to the email address:</p>
+                    <p class="email">no email supplied</p>
+                    <p class="note">
+                        If you don't receive it within 5 minutes, 
+                        it's because this is only a demo.
+                    </p>
+                </div>
+
+                <div class="terms">
+                    <span>By submitting, you agree to the <strong>Terms of Service</strong>.</span>
+                </div>
             </div>
+            
         </div>
     </div>
+
+    <script>
+        // HTML ELEMENTS
+        const page = document.querySelector('.page-content');
+        const signupForm = {
+            form: document.querySelector('.signup-form form'),
+            email: document.querySelector('#email'),
+            firstName: document.querySelector('#first-name'),
+            lastName: document.querySelector('#last-name'),
+        }
+        const confirmation = {
+            name: document.querySelector('.welcome-text .greeting .name'),
+            email: document.querySelector('.signup-confirm .email'),
+        }
+
+        // EVENT LISTENERS
+        signupForm.form.addEventListener('submit', submitForm);
+
+        // FUNCTIONS
+        function submitForm(e) {
+            e.preventDefault();
+            if (!signupForm.form.checkValidity()) return;
+
+            confirmation.name.textContent =  `${signupForm.firstName.value} ${signupForm.lastName.value}`;
+            confirmation.email.textContent = signupForm.email.value;
+            page.classList.add('confirm');
+        }
+    </script>
 </body>
 </html>

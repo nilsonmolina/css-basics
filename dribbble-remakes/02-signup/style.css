@@ -82,6 +82,7 @@ button:visited {
     display: flex;
     justify-content: space-between;
     height: 100%;
+    max-height: 50rem;
 }
 
 /* ---------------------------------------------------
@@ -130,42 +131,79 @@ button:visited {
 }
 
 /* ---------------------------------------------------
-    LOGIN FORM
+    SIGNUP
 --------------------------------------------------- */
-.login-form {
+.signup {
+    position: relative;
+}
+.terms {
+    position: absolute;
+    top: 48rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+.page-content.confirm .signup-form {
+    opacity: .2;
+    transform: translateY(-5rem) scale(0.85);
+}
+.page-content.confirm .signup-confirm {
+    z-index: 100;
+    opacity: 1;
+    transform: translateY(-43rem);
+}
+.page-content.confirm .terms {
+    display: none;
+}
+.page-content.confirm .greeting,
+.page-content .welcome {
+    display: inline;
+}
+.page-content.confirm .welcome,
+.page-content .greeting {
+    display: none;
+}
+/* ---------------------------------------------------
+    SIGNUP FORM
+--------------------------------------------------- */
+.signup-form {
     width: 30rem;
     padding: 5rem 5rem 4rem 5rem;
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+    transition: all .5s ease-in;
 }
-.login-form form > * {
+.signup-form form > * {
     width: 100%;
     display: flex;
     margin-bottom: 2rem;
     position: relative;
 }
-.login-form .icon {
+.signup-form .icon {
     color: var(--primary-color-dark);
     align-self: center;
-    padding-right: 1rem;
     font-size: 1.8rem;
+    padding-right: .5rem;
 }
-.login-form input {
+.signup-form input {
     flex-grow: 1;
     height: 5rem;
     font-size: 1.4rem;
     font-weight: 100;
     color: #555;
+    padding-left: .5rem;
 }
-.login-form input::placeholder {
+.signup-form input::placeholder {
     color:#aaaaaa;
 }
-.login-form input:focus::placeholder {
+.signup-form input:focus::placeholder {
     color:#d1cad1;
 }
-.login-form .underline::before {
+.signup-form .underline::before {
     content: "";
     position: absolute;
     bottom: -.4rem;
@@ -174,16 +212,16 @@ button:visited {
     background-color: #dadada;
     transition: all .2s ease-in;
 }
-.login-form .underline:focus-within::before {
+.signup-form .underline:focus-within::before {
     transform: scaleX(1.1);
     background: var(--primary-color-dark);
 }
 
-.login-form .submit {
+.signup-form .submit {
     justify-content: flex-end;
     margin-bottom: 0;
 }
-.login-form .submit button {
+.signup-form .submit button {
     align-self: right;
     margin-top: 2rem;
     padding: 1.7rem 5rem;
@@ -194,6 +232,7 @@ button:visited {
     text-transform: uppercase;
     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
     transition: all .2s ease-in;
+    background: var(--primary-color-dark);
     background-image: linear-gradient(
         to right,
         var(--primary-color-dark),
@@ -201,13 +240,53 @@ button:visited {
     );
 }
 
-.login-form .submit button:hover,
-.login-form .submit button:focus,
-.login-form .submit button:active {
+.signup-form .submit button:hover,
+.signup-form .submit button:focus,
+.signup-form .submit button:active {
     transform: scale(0.99);
     box-shadow: 0 0 1rem rgba(0,0,0,.2);
     border: none;
     outline: 0;
+}
+
+/* ---------------------------------------------------
+    SIGNUP CONFIRMATION
+--------------------------------------------------- */
+.signup-confirm {
+    width: 30rem;
+    padding: 9rem 5rem 7rem 5rem;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    opacity: .2;
+    transform: translateY(-42rem) scale(.85);
+    transition: all .5s ease-in;
+}
+.signup-confirm .title {
+    padding: 3rem 0;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 600;
+}
+.signup-confirm .message {
+    font-size: 1.7rem;
+    line-height: 3rem;
+    font-weight: 400;
+}
+.signup-confirm .email {
+    padding: 2rem 0;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--primary-color-dark);
+}
+.signup-confirm .note {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #696969;
 }
 
 /* ---------------------------------------------------
@@ -236,7 +315,7 @@ button:visited {
     border-radius: 50%;
     background-color: rgba(255,255,255,.05);
 }
-.login-form::before {
+.signup-form::before {
     content: "";
     position: absolute;
     bottom: -19rem;
@@ -245,4 +324,28 @@ button:visited {
     width: 30rem;
     border-radius: 50%;
     background-color: rgba(200, 150, 200, .08);
+}
+.signup-confirm::before {
+    content: "";
+    position: absolute;
+    bottom: -19rem;
+    right: -10rem;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    background-color: rgba(200, 150, 200, .08);
+}
+.signup-confirm::after {
+    content: "";
+    position: absolute;
+    top: -6rem;
+    left: -3rem;
+    height: 25rem;
+    width: 18rem;
+    transform: rotate(45deg);
+    border-radius: 50%;
+    background: transparent;
+    border: 3rem solid rgba(243,97,97,.1);
+    border-right: 2.5rem solid rgba(243,97,97,.1);
+    border-bottom: 1rem solid rgba(243,97,97,.1);
 }
