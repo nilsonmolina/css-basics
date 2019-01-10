@@ -152,6 +152,9 @@ button:visited {
     opacity: .2;
     transform: translateY(-5rem) scale(0.85);
 }
+.page-content.confirm .signup-form input {
+    display: disable;
+}
 .page-content.confirm .signup-confirm {
     z-index: 100;
     opacity: 1;
