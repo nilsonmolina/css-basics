@@ -111,7 +111,7 @@ input:focus {
     background-color: var(--primary-color);
     border-radius: 4rem;
     position: absolute;
-    bottom: -.8rem;
+    bottom: -.9rem;
 }
 .form-side .logo div:nth-child(2) {
     height: 1rem;
@@ -247,9 +247,7 @@ input:focus {
     }
 }
 @media only screen and (max-width: 800px) {
-    html {
-        font-size: 55%;
-    }
+    html { font-size: 55%;}
     body {
         background-color: #fff;
     }
@@ -264,12 +262,15 @@ input:focus {
     .form-side .wrapper {
         width: 30rem;
         margin: 0 auto;
+        padding: 0 4rem;
+    }
+    .form-side .heading { margin-top: 4rem; }
+    .form-side form { margin-top: 4rem; }
+}
+@media only screen and (max-height: 450px) {
+    .form-side .wrapper {
+        width: 30rem;
+        margin: 0 auto;
         padding: 4rem;
-    }
-    .form-side .heading {
-        margin-top: 4rem;
-    }
-    .form-side form {
-        margin-top: 4rem;
     }
 }
