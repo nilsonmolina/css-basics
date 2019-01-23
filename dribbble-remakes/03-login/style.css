@@ -274,3 +274,14 @@ input:focus {
         padding: 4rem;
     }
 }
+@media only screen and (max-width: 800px) and (min-height: 450px) {
+    .page-wrap {
+        position: relative;
+        top: -4rem;
+    }
+    .form-side .wrapper {
+        width: 30rem;
+        margin: 0 auto;
+        padding: 4rem;
+    }
+}
