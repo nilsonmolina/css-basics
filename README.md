@@ -20,6 +20,10 @@ This repo will hold a combination of css trainings and css tricks that I've lear
     A simple and clean login form. Designed responsive views on my own to allow for more device accessibility. Written entirely with HTML & CSS.  No libraries, frameworks, tools or JS were needed.  
     *- [Original Design](https://dribbble.com/shots/2279953-Login)*
 
+- **[SignIn / SignOut Animated Form](https://nilsonmolina.github.io/css-basics/dribbble-remakes/04-login-signup/index.html)**  
+    An animated sign in and sign up form. Not an exact recreation, but an interesting challenge with the animation aspect. Written in vanilla HTML, CSS, and a little bit of JS for changing classes on button presses. No responsive design was implemented, just set minimum page sizes to prevent it from breaking.
+    *- [Original Design](https://dribbble.com/shots/5311359-Diprella-Login)*
+
 ### __Quick CSS Tricks__
 * [Vertical Centering](https://nilsonmolina.github.io/css-basics/css-tricks/vertical-center/index.html)
 --- 
