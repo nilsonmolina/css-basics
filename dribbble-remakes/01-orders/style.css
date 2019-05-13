@@ -149,6 +149,9 @@ body {
     border-radius: 50%;
     background: #e672d3;
 }
+.navbar-icon .icon-bell {
+    transform: rotate(45deg);
+}
 
 /* ---------------------------------------------------
     SECONDARY NAV
@@ -157,6 +160,7 @@ body {
     width: 100%;
     padding-top: .5rem;
     padding-bottom: 1.7rem;
+    position: relative;
 }
 .inner-nav-items {
     display: flex;
@@ -181,6 +185,29 @@ body {
     font-weight: 500;
     color: var(--grey-font-color);
     border-bottom: 2px solid var(--primary-color);
+}
+
+.inner-nav-button {
+    position: absolute;
+    right: 0;
+    top: -3rem;
+}
+.inner-nav-button button {
+    background-color: var(--primary-color-dark);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 1.3rem 4rem;
+    color: #efefef;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px 1px var(--primary-color);
+    cursor: pointer;
+    transition: box-shadow .2s ease-in;
+}
+.inner-nav-button button:hover {
+    box-shadow: 0 2px 20px 1px var(--primary-color-darker);    
 }
 
 .line-break {

@@ -17,9 +17,9 @@
             <div class="container">
                 <div class="navbar-items">
                     <div class="navbar-links">
-                        <div class="navbar-item active">Orders</div>
-                        <div class="navbar-item">Customers</div>
-                        <div class="navbar-item">Inventory</div>
+                        <div class="navbar-item">Dashboard</div>
+                        <div class="navbar-item">Leaderboard</div>
+                        <div class="navbar-item active">Reports</div>
                     </div>
                     <div class="navbar-icons">
                         <div class="navbar-item alert">
@@ -27,12 +27,12 @@
                                 <span class="icon-mail"></span>
                             </div>
                         </div>
-                        <div class="navbar-item">
+                        <div class="navbar-item alert">
                             <div class="navbar-icon">
                                 <span class="icon-bell"></span>
                             </div>
                         </div>
-                        <div class="navbar-item active">
+                        <div class="navbar-item">
                             <div class="navbar-icon">
                                 <span class="icon-settings"></span>
                             </div>
@@ -51,9 +51,37 @@
                         <div class="inner-nav-item">Processing</div>
                         <div class="inner-nav-item active">All Orders</div>
                     </div>
+                    <div class="inner-nav-button">
+                        <button>New Order</button>
+                    </div>
                 </nav>
 
                 <div class="line-break"></div>
+
+                <div class="orders-list">
+                    <table class="orders">
+                        <thead>
+                            <th></th>
+                            <th>Order Ref.</th>
+                            <th>Shipping Address</th>
+                            <th>Ordered</th>
+                            <th>Customer</th>
+                            <th>Status</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="" id=""></td>
+                                <td>#27361</td>
+                                <td><span>724 Wilson Avenue</span> Lewisville, TX 75067</td>
+                                <td>2/8/17</td>
+                                <td>K. Arias</td>
+                                <td>Ongoing</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
         </div>
