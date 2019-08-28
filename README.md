@@ -27,4 +27,5 @@ This repo will hold a combination of css trainings and css tricks that I've lear
 ### __Quick CSS Tricks__
 * [Vertical Centering](https://nilsonmolina.github.io/css-basics/css-tricks/vertical-center/index.html)
 * [SVG Text Animation](https://nilsonmolina.github.io/css-basics/css-tricks/svg-text-animation/index.html)
+* [Nav Bar Animation](https://nilsonmolina.github.io/css-basics/css-tricks/navbar-animation/index.html)
 --- 
