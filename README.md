@@ -24,8 +24,11 @@ This repo will hold a combination of css trainings and css tricks that I've lear
     An animated sign in and sign up form. Not an exact recreation, but an interesting challenge with the animation aspect. Written in vanilla HTML, CSS, and a little bit of JS for changing classes on button presses. No responsive design was implemented, just set minimum page sizes to prevent it from breaking.   
     *- [Original Design](https://dribbble.com/shots/5311359-Diprella-Login)*
 
-### __Quick CSS Tricks__
-* [Vertical Centering](https://nilsonmolina.github.io/css-basics/css-tricks/vertical-center/index.html)
+### __Simple Animations__
 * [SVG Text Animation](https://nilsonmolina.github.io/css-basics/css-tricks/svg-text-animation/index.html)
 * [Nav Bar Animation](https://nilsonmolina.github.io/css-basics/css-tricks/navbar-animation/index.html)
+* [Card Hover Animation](https://nilsonmolina.github.io/css-basics/css-tricks/card-hover-animation/index.html)
+### __Quick CSS Tricks__
+* [Vertical Centering](https://nilsonmolina.github.io/css-basics/css-tricks/vertical-center/index.html)
+
 --- 

@@ -1,0 +1,101 @@
+/* -----------------------
+    BASE
+----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 1000px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+/* -----------------------
+    CARD
+----------------------- */
+.card {
+    position: relative;
+    margin: 15px;
+}
+
+.face,
+.body {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .5s;
+}
+.card:hover .face,
+.card:hover .body {
+    transform: translateY(0);
+}
+.card:hover .face {
+    background: #ff0057;
+}
+
+.face {
+    background: #333;
+    z-index: 1;
+    transform: translateY(100px);
+}
+.face img {
+    width: 100px;
+}
+.face h3 {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+.face * {
+    opacity: .2;
+    transition: opacity .5s;
+}
+
+.card:hover .face * {
+    opacity: 1;
+}
+
+.body {
+    background: #fff;
+    align-items: flex-start;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .8);
+    padding: 20px;
+    transform: translateY(-100px);
+}
+.body a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 900;
+    color: #444;
+    border: 1px solid #444;
+    transition: all .15s ease-in;
+}
+.body a:hover {
+    background: #444;
+    color: white;
+}
